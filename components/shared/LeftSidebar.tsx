@@ -16,7 +16,7 @@ const LeftSidebar = () => {
     <main>
       <aside id="sidebar" className="flex flex-col rounded-3xl bg-white p-4 items-center shadow-2xl">
         <Avatar className="h-20 w-20">
-          <AvatarImage src="https://icons-for-free.com/iconfiles/png/512/customer+information+personal+profile+user+icon-1320086045331670685.png" alt=''/>
+          <AvatarImage src="https://icons-for-free.com/iconfiles/png/512/customer+information+personal+profile+user+icon-1320086045331670685.png" draggable='false' alt=''/>
         </Avatar>
         <h1 className="font-bold text-xl" id="name">
           Rara Gembul

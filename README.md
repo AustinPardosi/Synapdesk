@@ -1,34 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SynapDesk Website
+**Status:** IN PROGRESS
+> SynapDesk is a web application that is useful for increasing productivity and efficiency in remote and hybrid work models <br>
+> Link deployment: https://synapdesk.vercel.app/
 
-## Getting Started
+<!-- ## Table of Contents
 
-First, run the development server:
+- [Prerequisites](#prerequisites)
+- [Technology Used](#technology-used)
+- [Installation](#installation)
+- [Application Display](#application-display)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Prerequisites
+
+Before you begin, ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/en) (version 16.x or higher)
+- [npm](https://www.npmjs.com/n) (usually comes with Node.js installation)
+
+## Technology Used
+
+SynapDesk is built using the following technologies and libraries:
+
+- [Next.js](https://react.dev) - A React framework for building server-rendered React applications.
+- [Chakra UI](https://chakra-ui.com) - Component library for React applications
+- [Apollo Client](https://www.apollographql.com/docs/react) - GraphQL client for React
+- [Framer Motion](https://www.framer.com/motion) - Animation library for React
+- [GraphQL](https://graphql.org/) - Query language for APIs
+
+For a complete list of dependencies, please refer to the package.json file.
+
+## Installation
+
+### 1. Clone Repo
+
+Clone repository by writing this command
+
+```sh
+git clone git@github.com:AustinPardosi/Countrypedia.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+or if you're using https
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+git clone https://github.com/AustinPardosi/Countrypedia.git
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 2. Install Dependencies
 
-## Learn More
+Install all dependencies that are required by writing this command
 
-To learn more about Next.js, take a look at the following resources:
+```sh
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Running the Application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To start the Countrypedia website locally, run the following command
 
-## Deploy on Vercel
+```sh
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This command will launch the development server and open the application in your default web browser. If the browser doesn't open automatically, you can access the application by navigating to `https://localhost:3000` in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Application Display
+
+<img src="https://i.ibb.co/M72DvcS/Screenshot-2023-08-10-142458.png" width="600">
+<img src="https://i.ibb.co/h93VnQg/Screenshot-2023-08-10-142534.png" width="600">
+<img src="https://i.ibb.co/stmLVfZ/Screenshot-2023-08-10-142617.png"> -->
