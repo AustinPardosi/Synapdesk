@@ -1,22 +1,32 @@
-"use client";
+'use client'
 
-import React from "react";
-import { useRouter } from "next/navigation"; // Import useRouter dari Next.js
-import useRedirectAfterSomeSeconds from "./redirect";
+import Link from "next/link";
+import React, { useState, useEffect } from "react";
 
 const Page = () => {
-  const router = useRouter(); // Inisialisasi useRouter
-  const { secondsRemaining } = useRedirectAfterSomeSeconds("/home-page", 5);
+  const [secondsRemaining, setSecondsRemaining] = useState(5);
 
-  // Buat fungsi untuk melakukan redirect
-  const redirectToHomePage = () => {
-    router.push("/home-page"); // Redirect ke halaman '/home-page'
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      window.location.href = "/home-page"; // Redirect to the homepage after 5 seconds
+    }, 5000);
 
-  // Tambahkan kondisi untuk melakukan redirect
-  if (secondsRemaining === 0) {
-    redirectToHomePage();
-  }
+    const interval = setInterval(() => {
+      setSecondsRemaining((prevSeconds) => {
+        // Ensure the countdown doesn't go below zero
+        if (prevSeconds > 0) {
+          return prevSeconds - 1;
+        } else {
+          return 0;
+        }
+      });
+    }, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <main className="font-poppins flex flex-col items-center justify-center h-screen w-screen">
@@ -27,7 +37,8 @@ const Page = () => {
         Your Log In Is{" "}
         <span className="text-green-500 font-bold">Successful</span>
       </h1>
-      <h1 className="text-sm font-light mt-2"> Redirecting to homepage in{" "}
+      <h1 className="text-sm font-light mt-2">
+        Redirecting to homepage in{" "}
         {secondsRemaining} {secondsRemaining !== 1 ? "seconds" : "second"}.
       </h1>
     </main>

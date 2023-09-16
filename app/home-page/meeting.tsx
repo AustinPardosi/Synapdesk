@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export function UpcomingMeeting() {
   return (
-    <Card className="w-full bg-white h-fit p-4 shadow-2xl rounded-3xl justify-center items-center">
+    <Card className="w-full bg-white h-fit shadow-2xl rounded-3xl justify-center items-center">
       <CardHeader className="text-3xl font-medium inline-block">
         Upcoming <strong>Meetings</strong>
       </CardHeader>

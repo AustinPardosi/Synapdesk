@@ -19,8 +19,6 @@ const Page = () => {
       if (videoRef.current) {
         videoRef.current.srcObject = userMediaStream;
         setStream(userMediaStream);
-
-        // Wait for the metadata to load
         videoRef.current.onloadedmetadata = () => {
           setWebcamActive(true);
         };
