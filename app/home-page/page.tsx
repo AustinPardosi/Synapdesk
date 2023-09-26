@@ -24,7 +24,7 @@ const page = () => {
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   ssr: false;
   return (
-    <div className="flex h-screen w-screen bg-gray-100">
+    <div className="flex h-screen w-screen bg-gray-100 space-x-5">
       {/* Left Sidebar */}
       <div className="w-80 h-fit mx-8 my-10">
         <LeftSidebar />
@@ -52,7 +52,7 @@ const page = () => {
           type="search"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 mt-8 ">
+        <div className="flex space-x-20 mt-8 ">
           <div className="space-y-9 w-fit">
             <Calendar
               mode="single"

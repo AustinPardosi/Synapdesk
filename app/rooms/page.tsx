@@ -2,7 +2,6 @@ import React from "react";
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
-import { School } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -12,36 +11,27 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
+import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
-// import MainRooms from "./mainRooms";
 
 const page = () => {
   return (
-    <main className="flex h-screen w-screen bg-gray-100 items-center justify-center">
+    <main className="flex h-screen w-screen bg-gray-100 ">
       {/* Left Sidebar */}
       <div className="w-80 h-fit mx-8 my-10">
         <LeftSidebar />
       </div>
 
       {/* Right Content */}
-      <div className="p-4 space-y-9">
+      <div className="p-4 mt-6 space-y-9">
         <Card className="w-full p-5 rounded-3xl shadow-2xl ">
           <Link href="/room-department">
             <Button
               variant="outline"
               className="w-full h-full border-dashed border-2 border-gray-400 flex flex-col justify-center items-center rounded-3xl p-3"
             >
-              <School size={60} />
+              <Image src="/office.png" width={80} height={80} alt="" />
               <h1 className="flex text-lg">
                 Visit Virtual Office <MoveRight className="ml-2" />
               </h1>

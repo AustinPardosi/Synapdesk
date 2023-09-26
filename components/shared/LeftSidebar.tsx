@@ -8,11 +8,38 @@ import { ListTodo } from "lucide-react";
 import { Users } from "lucide-react";
 import { BarChart } from "lucide-react";
 import { Settings } from "lucide-react";
-import Image from "next/image";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import supabase from "@/utils/supabase";
+import { user } from "@nextui-org/react";
+
+interface User {
+  id: number;
+  name: string;
+  image: string;
+  role: string;
+}
+
+interface LeftSidebarProps {
+  user: User | null;
+}
 
 const LeftSidebar = () => {
   const pathname = usePathname();
+  const [users, setUser] = React.useState<User | null>(null);
+  React.useEffect(() => {
+    async function fetchUser() {
+      const { data, error } = await supabase
+        .from("users")
+        .select("id, name, image, role")
+        .eq("id", 6);
+
+      if (!error) {
+        setUser(data[0]);
+      }
+    }
+    fetchUser();
+  }, []);
+  // console.log(users);
 
   return (
     <main>
@@ -22,16 +49,16 @@ const LeftSidebar = () => {
       >
         <Avatar className="h-20 w-20">
           <AvatarImage
-            src="https://icons-for-free.com/iconfiles/png/512/customer+information+personal+profile+user+icon-1320086045331670685.png"
+            src={users?.image}
             draggable="false"
             alt=""
           />
         </Avatar>
         <h1 className="font-bold text-xl" id="name">
-          Rara Gembul
+          {users?.name}
         </h1>
         <h1 className="font-light text-slate-400 text-base mb-12" id="role">
-          Commercial Manager
+          {users?.role}
         </h1>
         <ul className="w-4/6">
           <li>

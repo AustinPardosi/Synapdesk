@@ -1,40 +1,25 @@
 import React from "react";
 import LeftSidebar from "@/components/shared/LeftSidebar";
-import { Button } from "@/components/ui/button";
-import { MoveRight } from "lucide-react";
-import { School } from "lucide-react";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
-import Image from "next/image";
-import Link from "next/link";
-// import MainRooms from "./mainRooms";
+import { Card } from "@/components/ui/card";
 
 const page = () => {
   return (
-    <main className="flex h-screen w-screen bg-gray-100 items-center justify-center">
+    <main className="flex h-screen w-screen bg-gray-100">
       {/* Left Sidebar */}
       <div className="w-80 h-fit mx-8 my-10">
         <LeftSidebar />
       </div>
 
       {/* Right Content */}
-      <div className="p-4 space-y-9">
+      <div className="p-4 mt-6 space-y-9">
         <Card className="w-full p-10 rounded-3xl shadow-2xl">
           <div className="flex justify-between">
             <h1 className="font-extrabold text-3xl">September Performance</h1>
@@ -78,8 +63,51 @@ const page = () => {
                 <TableCell className="font-medium">3</TableCell>
                 <TableCell>Wednesday</TableCell>
                 <TableCell>07.00 - 10.29</TableCell>
-                <TableCell className="text-red-500 font-extrabold">3h 29m</TableCell>
-                <TableCell className="text-red-500 font-extrabold">20%</TableCell>
+                <TableCell className="text-red-500 font-extrabold">
+                  3h 29m
+                </TableCell>
+                <TableCell className="text-red-500 font-extrabold">
+                  20%
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium ">4</TableCell>
+                <TableCell>Thursday</TableCell>
+                <TableCell>08.00 - 15.00</TableCell>
+                <TableCell>5h 30m</TableCell>
+                <TableCell>100%</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">5</TableCell>
+                <TableCell>Friday</TableCell>
+                <TableCell>06.00 - 13.50</TableCell>
+                <TableCell>7h 50m</TableCell>
+                <TableCell>85%</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">8</TableCell>
+                <TableCell>Monday</TableCell>
+                <TableCell>07.00 - 10.29</TableCell>
+                <TableCell className="text-red-500 font-extrabold">
+                  3h 29m
+                </TableCell>
+                <TableCell className="text-red-500 font-extrabold">
+                  20%
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium ">9</TableCell>
+                <TableCell>Thursday</TableCell>
+                <TableCell>08.00 - 15.00</TableCell>
+                <TableCell>5h 30m</TableCell>
+                <TableCell>100%</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className="font-medium">10</TableCell>
+                <TableCell>Friday</TableCell>
+                <TableCell>06.00 - 13.50</TableCell>
+                <TableCell>7h 50m</TableCell>
+                <TableCell>85%</TableCell>
               </TableRow>
             </TableBody>
           </Table>

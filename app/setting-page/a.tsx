@@ -1,23 +1,13 @@
-"use client";
-
 import React from "react";
 import LeftSidebar from "@/components/shared/LeftSidebar";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import { Card, CardContent } from "@/components/ui/card";
-import { CardHeader } from "@nextui-org/react";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
+import { CardHeader } from "@nextui-org/react";
 
-const Page = () => {
+const page = () => {
   return (
-    <main className="flex h-screen w-screen bg-gray-100 ">
+    <main className="flex h-screen w-screen bg-gray-100 items-center justify-center">
       {/* Left Sidebar */}
       <div className="w-80 h-fit mx-8 my-10">
         <LeftSidebar />
@@ -26,14 +16,14 @@ const Page = () => {
       {/* Right Content */}
       <div className="p-4 space-y-9">
         <Card className="w-full p-10 rounded-3xl shadow-2xl">
-          <h1 className="font-extrabold text-center py-10 text-3xl underline underline-offset-8">
-            General Settings
-          </h1>
-          <form>
-            <div className="flex space-x-20">
+          <CardHeader>
+            <h1 className="font-bold text-3xl underline underline-offset-8">
+              General Settings
+            </h1>
+          </CardHeader>
+          <CardContent>
               <h1>Profile picture</h1>
               <Input id="picture" type="file" />
-            </div>
             <div className="flex gap-20 mt-10">
               <h1 className="font-bold">Name</h1>
               <h1>Karina Rahadiani</h1>
@@ -58,11 +48,11 @@ const Page = () => {
               <h1>Email notification</h1>
               <Switch id="airplane-mode" className="green" />
             </div>
-          </form>
+          </CardContent>
         </Card>
       </div>
     </main>
   );
 };
 
-export default Page;
+export default page;
